@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng ký người dùng</title>
+</head>
+<body>
+  <h2>ĐĂNG KÝ NGƯỜI DÙNG</h2>
+
+  <form action="dangky.asp" method="post" name="frmDangKy">
+    Tên đăng nhập: <input type="text" name="username" /><br /><br />
+    Mật khẩu: <input type="password" name="pwd" /><br /><br />
+    Nhập lại mật khẩu: <input type="password" name="pwd2" /><br /><br />
+    Họ và tên: <input type="text" name="hoten" /><br /><br />
+
+    Giới tính:
+    <input type="radio" name="sex" value="male" checked /> Nam
+    <input type="radio" name="sex" value="female" /> Nữ<br /><br />
+
+    Sở thích:
+    <input type="checkbox" name="hobby" value="music" /> Âm nhạc
+    <input type="checkbox" name="hobby" value="sport" /> Thể thao
+    <input type="checkbox" name="hobby" value="travel" /> Du lịch<br /><br />
+
+    Tỉnh/Thành phố:
+    <select name="tinh">
+      <option value="hcm" selected>TP. Hồ Chí Minh</option>
+      <option value="hn">Hà Nội</option>
+      <option value="dn">Đà Nẵng</option>
+    </select><br /><br />
+
+    Trái cây yêu thích:<br />
+    <select name="traicay" multiple size="4">
+      <option value="xoai" selected>Xoài</option>
+      <option value="oi">Ổi</option>
+      <option value="saurieng">Sầu riêng</option>
+      <option value="thom">Thơm</option>
+    </select><br /><br />
+
+    Giới thiệu bản thân:<br />
+    <textarea name="gioithieu" rows="5" cols="30"></textarea><br /><br />
+
+    <input type="submit" value="Đăng ký" />
+    <input type="reset" value="Nhập lại" />
+    <input type="button" value="Thoát" />
+  </form>
+</body>
+</html>

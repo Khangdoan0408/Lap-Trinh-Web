@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV - Đoàn Trần Nguyên Khang</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark: #43444f;
+    --side: #d9d1ce;
+    --text: #3a3a3f;
+    --white: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text);
+    background: #e9e9ec;
+    padding: 24px 12px;
+  }
+  .cv {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    width: 100%;
+    max-width: 794px;
+    min-height: 1123px;
+    margin: 0 auto;
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+  }
+
+  /* ---------- Cột trái ---------- */
+  .side { background: var(--side); padding: 34px 0 40px; }
+  .avatar {
+    width: 190px; height: 190px;
+    margin: 0 auto 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--white);
+  }
+  .avatar img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    /* phóng to vào khuôn mặt, chỉnh số nếu muốn lệch trái/phải/lên/xuống */
+    transform: scale(2);
+    transform-origin: 43% 50%;
+  }
+
+  .bar {
+    background: var(--dark);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 12.5px;
+    letter-spacing: .6px;
+    padding: 7px 14px;
+    margin-bottom: 14px;
+  }
+  .side .bar { margin-right: 22px; }
+  .side section { margin-bottom: 34px; }
+  .side .body { padding: 0 20px 0 14px; font-size: 12px; }
+  .side ul { list-style: none; }
+  .side li { margin-bottom: 4px; }
+  .side li::before { content: "- "; }
+
+  /* ---------- Cột phải ---------- */
+  .main { display: flex; flex-direction: column; }
+  .head {
+    background: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 44px 24px 34px;
+  }
+  .head h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 34px;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .head p {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .content { padding: 22px 0 40px 22px; }
+  .content section { margin-bottom: 22px; }
+  .content .bar { margin-bottom: 16px; }
+  .content .body { padding-right: 26px; }
+
+  .item { margin-bottom: 16px; }
+  .item h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 15px;
+    margin-bottom: 1px;
+  }
+  .item .sub { font-style: italic; margin-bottom: 4px; }
+  .item ul { list-style: none; font-size: 12px; }
+  .item li::before { content: "- "; }
+
+  @media (max-width: 640px) {
+    .cv { grid-template-columns: 1fr; }
+    .side { order: 2; }
+    .side .bar { margin-right: 0; }
+    .head h1 { font-size: 30px; }
+  }
+  @media print {
+    body { background: none; padding: 0; }
+    .cv { box-shadow: none; }
+    @page { size: A4; margin: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="cv">
+
+  <!-- ===== Cột trái ===== -->
+  <aside class="side">
+    <div class="avatar"><img src="avatar.jpg" alt="Ảnh đại diện"></div>
+
+    <section>
+      <div class="bar">LÝ LỊCH CÁ NHÂN</div>
+      <div class="body">
+        Sinh viên ngành Công nghệ thông tin, Trường Đại học Giao thông Vận tải TP.HCM, yêu thích lập trình web.
+        Có kinh nghiệm làm việc nhóm, chủ động học hỏi và mong muốn phát triển
+        thành lập trình viên Full-stack chuyên nghiệp.
+      </div>
+    </section>
+
+    <section>
+      <div class="bar">THÀNH TÍCH</div>
+      <div class="body">
+        <ul>
+          <li>Hoàn thành đồ án Lập trình Web đạt điểm cao</li>
+          <li>Tham gia dự án nhóm trên GitHub</li>
+          <li>Đạt chứng chỉ tiếng Anh B1</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="bar">THÔNG TIN LIÊN HỆ</div>
+      <div class="body">
+        Ngày sinh: 04/08/2005<br>
+        Di động: 0879 668 946<br>
+        Email: nguyenkhang04082005@gmail.com<br>
+        GitHub: github.com/Khangdoan0408<br>
+        Địa chỉ: TP. Hồ Chí Minh
+      </div>
+    </section>
+  </aside>
+
+  <!-- ===== Cột phải ===== -->
+  <main class="main">
+    <header class="head">
+      <h1>ĐOÀN TRẦN NGUYÊN KHANG</h1>
+      <p>Lập trình viên Web</p>
+    </header>
+
+    <div class="content">
+      <section>
+        <div class="bar">KINH NGHIỆM LÀM VIỆC</div>
+        <div class="body">
+          <div class="item">
+            <h3>Thực tập sinh Lập trình Web</h3>
+            <div class="sub">Công ty ABC | 06/2025 - 09/2025</div>
+            <ul>
+              <li>Xây dựng giao diện website bằng HTML, CSS, JavaScript</li>
+              <li>Phối hợp với team backend để tích hợp API</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3>Thành viên dự án nhóm</h3>
+            <div class="sub">Đồ án Lập trình Web | 2025</div>
+            <ul>
+              <li>Phát triển website thương mại điện tử cùng nhóm 4 người</li>
+              <li>Quản lý mã nguồn bằng Git và GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="bar">HỌC VẤN</div>
+        <div class="body">
+          <div class="item">
+            <h3>Đại học Giao thông Vận tải TP.HCM</h3>
+            <div class="sub">Sinh viên ngành Công nghệ thông tin | 2023 - 2026</div>
+            <ul>
+              <li>GPA: 3.1 / 4.0</li>
+              <li>Thành viên Câu lạc bộ Lập trình</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3>Trường THPT ...</h3>
+            <div class="sub">Tốt nghiệp năm 20xx</div>
+            <ul>
+              <li>Thành tích nổi bật (nếu có)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="bar">KỸ NĂNG</div>
+        <div class="body">
+          HTML, CSS, JavaScript, React, Node.js, MySQL, Git/GitHub.
+          Kỹ năng làm việc nhóm, giao tiếp và quản lý thời gian.
+        </div>
+      </section>
+    </div>
+  </main>
+
+</div>
+</body>
+</html>
